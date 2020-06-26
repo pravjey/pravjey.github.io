@@ -18,13 +18,13 @@ This project can be split into three stages: Data Cleaning, Feature Selection an
 
 I have written two blog posts on this project:
 
-	1. [Cleaning the Ecoli Dataset using Python](https://pravinjeyaraj.wordpress.com/2019/05/04/cleaning-the-ecoli-dataset-using-python/ )
+	1. [Cleaning the Ecoli Dataset using Python](https://pravinjeyaraj.wordpress.com/2019/05/04/cleaning-the-ecoli-dataset-using-python/)
 
-	2. [Feature Selection in the Ecoli Dataset](https://pravinjeyaraj.wordpress.com/2019/10/23/feature-selection-in-the-ecoli-dataset/ ) 
+	2. [Feature Selection in the Ecoli Dataset](https://pravinjeyaraj.wordpress.com/2019/10/23/feature-selection-in-the-ecoli-dataset/) 
 	
 		The ranking of the features in terms of importance and evaluating the accuracy of the model after using a certain number of features.
 
-The full code is available at on [Github](https://pravjey.github.io/Ecoli/ml-ecoli.py)
+The full code is available from [Github](https://pravjey.github.io/Ecoli/ml-ecoli.py)
 
 
 
