@@ -22,7 +22,7 @@ I have written two blog posts on this project:
 
 	2. [Feature Selection in the Ecoli Dataset](https://pravinjeyaraj.wordpress.com/2019/10/23/feature-selection-in-the-ecoli-dataset/) - the ranking of the features in terms of importance and evaluating the accuracy of the model after using a certain number of features.
 
-The full code is available at on [Github](https://pravin.github.io/Ecoli/ml-ecoli.py)
+The full code is available at on [Github](https://pravjey.github.io/Ecoli/ml-ecoli.py)
 
 
 
