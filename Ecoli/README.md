@@ -2,12 +2,6 @@
 
 This project was a coursework assignment for a module in Machine Learning, rather than one that I chose out of personal interest. I also had no domain knowledge of the subject, apart from the description file provided. The purpose of this project was to identify the most important features and the maximum number of features to achieve an accurate classification and evaluate the resultant decision tree.
 
-What I learned from this project:
-
-	* The importance of data cleaning - until then, I had only worked with CSV files or text files with clear delimiters;
-
-	* The importance of aggregating or averaging across several iterations to account for slight differences that could affect results.
-
 This project can be split into three stages: Data Cleaning, Feature Selection and Model Evaluation. The program was written using Python and the following libraries were used:
 
 	*	matplotlib
