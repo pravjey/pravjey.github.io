@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js" style="display: block;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="">
+		<!-- Author Meta -->
+		<meta name="author" content="Dr Pravin Jeyaraj">
+		<!-- Meta Description -->
+		<meta name="description" content="A data science portfolio built and deployed by Dr Pravin Jeyaraj">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="portfolio">
+		<!-- meta character set -->
+		
+		<!-- Site Title -->
+		<title>Dr Pravin Jeyaraj</title>
+
+		<link href="./index_files/css" rel="stylesheet">
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="../index_files/linearicons.css">
+			<link rel="stylesheet" href="../index_files/font-awesome.min.css">
+			<link rel="stylesheet" href="../index_files/bootstrap.css">
+			<link rel="stylesheet" href="../index_files/magnific-popup.css">
+			<link rel="stylesheet" href="../index_files/jquery-ui.css">
+			<link rel="stylesheet" href="../index_files/nice-select.css">
+			<link rel="stylesheet" href="../index_files/animate.min.css">
+			<link rel="stylesheet" href="../index_files/owl.carousel.css">
+			<link rel="stylesheet" href="../index_files/main.css">
+		<script type="text/javascript" charset="UTF-8" src="./index_files/common.js.download"></script><script type="text/javascript" charset="UTF-8" src="./index_files/util.js.download"></script></head>
+
+		<body style="display: block;"><button type="button" id="mobile-nav-toggle"><i class="lnr lnr-menu"></i></button>
+			<header id="header" class="">
+	      <div class="container main-menu">
+	        <div class="row align-items-center justify-content-between d-flex">
+	          <div class="" id="logo">
+	            <a href="https://pravjey.github.io/"><h3>Dr Pravin Jeyaraj</h3></a>
+	         </div>
+	          <nav id="nav-menu-container">
+	            <ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+	              <li><a href="https://pravjey.github.io/">Home</a></li>
+	              <li><a href="https://pravjey.github.io/about.html">About</a></li>
+
+
+	              <li><a href="https://pravjey.github.io/archive.html">Portfolio</a></li>
+	              <li class=""><a href="http://pravinjeyaraj.wordpress.com">Blog</a></li>
+
+	              <li><a href="" class="genric-btn primary-border circle" target="_blank">CV</a></li>
+	              </ul>
+
+	          </nav><!-- #nav-menu-container -->
+	        </div>
+	      </div>
+	    </header><!-- #header -->
+
+
+
+<div clss="container">
+<hr>
+</div>
+			<!-- Start services Area -->
+			<section class="services-area section-gap">
+				<div class="container">
+		            <div class="row d-flex justify-content-center">
+		                <div class="menu-content  col-lg-7">
+		                    <div class="title">
+		                        <h1 class="mb-10">Classification of Ecoli Dataset</h1>
+		                        Having studied Machine learning, I chose this project primarily because I wanted to learn how to build a program that could classify data into categories efficiently and accurately. I have always had an layperson's interest in science and medical technology. But I had no prior domain knowledge of ecoli and relied completely on the description file provided in order to understand the dataset by observation. The purpose of this project was to identify the most important features and the maximum number of features need to achieve an accurate classification and evaluate the resultant decision tree.
+
+								<p>The program was written using Python and the following libraries were used: matplotlib, mpl_toolkits.mplot3d, pandas, sklearn, tabulate and time.</p?
+
+								<p>The project/program can be split into the following sections:</p>
+								
+								<h3>Initial section</h3>
+
+								<p>
+								<ol>
+									<li>Read dataset as a text file</li>
+									<li>Count the length of the dataset, the number of characters per line and the number of lines</li>
+								</ol>
+								
+								<p>This shows whether the dataset has been read as one would expect from a visual inspection and therefore gives an indication of how it should be cleaned.</p>
+								
+								<h3>Data cleaning</h3>
+								
+								<p>The dataset is cleaned as outlined in the blog post <a href="https://pravinjeyaraj.wordpress.com/2019/05/04/cleaning-the-ecoli-dataset-using-python/">Cleaning the Ecoli Dataset</a></p>
+								
+								<h3>Feature Selection</h3>
+								
+								<p>After cleaning, the dataset is stored in a dataframe so that the number of classes can be indentified and the features can be ranked, using the Extra Trees Method. It is observed that the results of the ranking function vary between function calls, so that the importance of some features change depending on the function call. Bagging and averaging is thus used to calculate in order to reduce the executional variance and calculate the relative importance of each feature.</p>
+								
+								<h3>Model Building and Evaluation</h3>
+								
+								<p>A decision tree was created using the feature with highest relative importance and the accuracy of the model was assessed by splitting the dataset into a training and test set, using the holdout method. However, the problem was to identify how the training set should be in order to achieve the highest accuracy. So the model building was repeated nine times using test sets that were 10% to 90% of the dataset. It was found that the accuracy ws highest when the test set size was 10% to 30% of the dataset, with the highest being at 30%. Once the test set became larger than this, the accuracy dropped significantly, presumably because there was not enough data in the training set to build a good model.</p>
+								
+								<p>However, even with a test set of 30%, the accuracy rate using only the most important feature was just 68%. There was clearly room to improve.</p>
+								
+								<p>The second stage was thus identify how many features were needed and the resulting accuracy, with a test set size of 30%. In order to select the features to be used, a threshold was set from 10% to 90% of the relative importance of the most important feature. The lower the threshold, the most features were selected. The output was a table showing the threshold, resultant accuracy and the features used. It was found that the highest accuracy was obtained when four or five features were used, at over 80%.<p>
+								
+								<p>The third stage was then to work out whether there was any computational advantage of using five features over four. This involved repeating the second stage, with the time taken for building the model at each threshold point being measured</p>
+								
+								<p>The output for the Feature Selection and Model Building and Evaluation stages were in table and graph forms. The findings and graphs are presented in the blog post, <a href="https://pravinjeyaraj.wordpress.com/2019/10/23/feature-selection-in-the-ecoli-dataset/">Feature Selection in the Ecoli Dataset</a></p>	
+								
+								<p>The full code is available from <a href"https://pravjey.github.io/Ecoli/ml-ecoli.py">Github</a></p>
+
+								<p><a href="https://pravjey.github.io/portfolio/archive.html">Back to Portfolio page</a></p>								
+		                    </p></div>
+		                </div>
+		            </div>
+
+
+			</div>
+
+		</div>
+	</div>
+
+	</section>
+
+
+<hr>
+
+			<!-- start footer Area -->
+			<footer class="footer-area section-gap">
+					<div class="container">
+							<div class="row">
+									<div class="col-lg-5 col-md-6 col-sm-6">
+											<div class="single-footer-widget">
+													<h4>About This Page</h4>
+													<p class="footer-text">
+															This website was coded in HTML, CSS, and Javascript based on a theme from Colorlib. It is hosted on Github. The code can be found <a href="https://github.com/pravjey/pravjey.github.io" target="_blank"> here.</a>
+													</p>
+													<p class="footer-text"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright ©<script>document.write(new Date().getFullYear());</script>2020 All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com/" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+											</div>
+									<!-- </div>
+									<div class="col-lg-5 col-md-6 col-sm-6">
+											<div class="single-footer-widget">
+													<h4>Newsletter</h4>
+													<p>Stay updated with my latest projects</p>
+					<div class="" id="mc_embed_signup">
+						 <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" novalidate="true">
+							<div class="input-group">
+								<input type="text" class="form-control" name="EMAIL" placeholder="Enter Email Address" onfocus="this.placeholder = &#39;&#39;" onblur="this.placeholder = &#39;Enter Email Address &#39;" required="">
+								<div class="input-group-btn">
+									<button class="btn btn-default" type="submit">
+										<span class="lnr lnr-arrow-right"></span>
+									</button>
+								</div>
+									<div class="info"></div>
+							</div>
+						</form>
+					</div>
+											</div>
+									</div> 
+									<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+											<div class="single-footer-widget">
+													<h4>Follow Me</h4>
+													<p>Let's be social. </p>
+													<div class="footer-social d-flex align-items-center">
+															<a href="https://medium.com/@harrisonjansma"><i class="fa fa-medium"></i></a>
+															<a href="http://www.linkedin.com/in/harrisonjansma"><i class="fa fa-linkedin"></i></a>
+															<a href="https://github.com/harrisonjansma"><i class="fa fa-github"></i></a>
+
+													</div>
+											</div>
+									</div>
+							</div>
+					</div> -->
+			</footer>
+			<!-- End footer Area -->
+
+
+			<script src="./index_files/jquery-2.2.4.min.js.download"></script>
+			<script src="./index_files/popper.min.js.download"></script>
+			<script src="./index_files/bootstrap.min.js.download"></script>
+			<script src="./index_files/js"></script>
+  			<script src="./index_files/easing.min.js.download"></script>
+			<script src="./index_files/hoverIntent.js.download"></script>
+			<script src="./index_files/superfish.min.js.download"></script>
+			<script src="./index_files/jquery.ajaxchimp.min.js.download"></script>
+			<script src="./index_files/jquery.magnific-popup.min.js.download"></script>
+    		<script src="./index_files/jquery.tabs.min.js.download"></script>
+			<script src="./index_files/jquery.nice-select.min.js.download"></script>
+            <script src="./index_files/isotope.pkgd.min.js.download"></script>
+			<script src="./index_files/waypoints.min.js.download"></script>
+			<script src="./index_files/jquery.counterup.min.js.download"></script>
+			<script src="./index_files/simple-skillbar.js.download"></script>
+			<script src="./index_files/owl.carousel.min.js.download"></script>
+			<script src="./index_files/mail-script.js.download"></script>
+			<script src="./index_files/scroll.js.download"></script>
+			<script src="./index_files/main.js.download"></script>
+		
+	
+<nav id="mobile-nav">
+	            <ul class="" style="touch-action: pan-y;" id="">
+	              <li><a href="https://pravjey.github.io/">Home</a></li>
+	              <li><a href="https://pravjey.github.io/about.html">About</a></li>
+
+
+	              <li><a href="https://pravjey.github.io/portfolio/archive,html">Portfolio</a></li>
+
+	              <li><a href="https://pravjey.github.io/PravinJeyarajCV.pdf" class="genric-btn primary-border circle" target="_blank">CV</a></li>
+	              </ul>
+
+	          </nav><div id="mobile-body-overly"></div></body></html>
