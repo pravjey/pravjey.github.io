@@ -1,0 +1,110 @@
+---
+title: "What do UFOs look like?"
+author: "Dr Pravin Jeyaraj"
+date: "30 January 2018"
+output: "html_document"
+---
+
+Source: NUFORC/Kaggle
+https://www.kaggle.com/NUFORC/ufo-sightings/data
+
+```{r}
+
+ufo_data = read.csv("e:/Data Science projects/ufo-sightings-around-the-world/scrubbed.csv")
+
+```
+
+# The shape of UFOs?
+
+```{r}
+
+shape_table = sort(table(ufo_data$shape))
+names(shape_table)
+sort(shape_table)
+
+```
+
+According to the dataset, there are 27 possible recognisable forms that a UFO can take, such as a dome, a hexagon, a pyramid, an egg, a cigar and so on. The most common observed form of UFO by far, at over 16,000, is a light - this is about twice as common than the second most  observed form, a triangle.
+
+Of course, if my knowledge of science fiction TV has taught me anything, just seeing a light could simply mean that the observation was at night time and, with the lights on, it was too dark to see anything much of the shape. Like when you are driving at night and a car is heading toward you from the opposite direction - the headlights are always the first thing you see, long before you see the actual chassis.
+
+```{r}
+
+shape.canttell = sum(ufo_data$shape == "unknown" | ufo_data$shape == "other" | ufo_data$shape == "")
+shape.canttell
+
+```
+
+
+However, the shape of 13,165 observations are recorded as "unknown", "other" or not specified. In other words, in actuality, it is not possible to tell the shape of a significant of number of UFO observations recorded by NUFORC. Therefore, it is quite possible that the numbers are subject to bias. For this reason, the values for "unknown", "other" and " " have been added together into an umbrella category "can't tell"
+
+```{r}
+
+
+shape_table.df <- data.frame(shape_table[-18][-25][-24])
+colnames(shape_table.df) <- c("UFO_shape", "Frequency")
+cant.tell.df <- data.frame("UFO_shape" = "cannot tell", "Frequency" = shape.canttell)
+shape_table.df <- rbind(shape_table.df, cant.tell.df)
+shape_table.df <- shape_table.df[order(shape_table.df$Frequency),]
+shape_table.df
+
+barplot(as.matrix(shape_table.df$Frequency), beside = TRUE, names.arg = shape_table.df$UFO_shape, xlab = "UFO Shape", ylab = "Frequency")
+
+```
+
+# How do the shape of observed UFOs differ across countries?
+ 
+```{r}
+
+ufo_shape.country = table(ufo_data$shape, ufo_data$country)
+ufo_shape.country
+
+```
+
+Generally speaking, "light", "triangle", "circle", "fireball" and "cannot tell" can be said to be most common form of UFOs observed. However, in Britain, the "sphere" shape has been observed particularly in Britain and the "disk" shape observed particularly in Australia (relative to other areas).
+
+## distribution of most common shapes accross the US
+
+```{r}
+
+ufoshape.us = table(ufo_data$shape, ufo_data$country == "us")
+barplot(tail(sort(ufoshape.us[,2])))
+
+```
+
+## distribution of most common shapes across Great Britain 
+
+```{r}
+
+ufoshape.gb = table(ufo_data$shape, ufo_data$country == "gb")
+barplot(tail(sort(ufoshape.gb[,2])))
+
+```
+
+## distribution of most common shapes across Denmark 
+
+```{r}
+
+ufoshape.de = table(ufo_data$shape, ufo_data$country == "de")
+barplot(tail(sort(ufoshape.de[,2])))
+
+```
+
+## distribution of most common shapes across Canada
+
+```{r}
+
+ufoshape.ca = table(ufo_data$shape, ufo_data$country == "ca")
+barplot(tail(sort(ufoshape.ca[,2])))
+
+```
+
+## distribution of most common shapes across Australia
+
+```{r}
+
+ufoshape.au = table(ufo_data$shape, ufo_data$country == "au")
+barplot(tail(sort(ufoshape.au[,2])))
+
+```
+
