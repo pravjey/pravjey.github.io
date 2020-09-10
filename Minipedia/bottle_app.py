@@ -13,17 +13,17 @@ import time
 HOST = "drpjeya.pythonanywhere.com"
 responsive = "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
 
-tweepy_consumer_key = "nP7BhUjbVGfMwZmG65kes8WNm"
-tweepy_consumer_secret = "c3tYVD4ZUFN8ZkeIdMUktmBksqdpfqSLRsTbjNgJ2fXAPoB5jw"
-tweepy_access_token = "897909419996041218-9w0Co5vu740brxciIOCsTm2clMPpHTl"
-tweepy_access_token_secret = "6h3y5oZSIsNYpUXcEM5oTwOtR1wJJ70ffPR2lgMUlYNvf"
+tweepy_consumer_key = ""
+tweepy_consumer_secret = ""
+tweepy_access_token = ""
+tweepy_access_token_secret = ""
 auth = tweepy.OAuthHandler(tweepy_consumer_key, tweepy_consumer_secret)
 auth.set_access_token(tweepy_access_token, tweepy_access_token_secret)
 api = tweepy.API(auth,wait_on_rate_limit_notify=True)
 
-google_api_key = "AIzaSyB0j0VPHo-wNWWP552bn_tYL9Fo9dReLZU"
-google_client_id = "150298367843-rodkf208a95a29hsfsg3dngjihpaq1hj.apps.googleusercontent.com"
-google_client_secret = "VrN1TIpgdAz5MMoa95rKGQGw"
+google_api_key = ""
+google_client_id = ""
+google_client_secret = ""
 
 @route('/')
 def home():
