@@ -19,7 +19,7 @@
 <div class="titlebar">
 	Redemption Care Services
 	<span style="float: right;">
-	Tel: <a href="tel:+447933052393">07933 052 393<a>
+	Tel: <a href="tel:+447933052393">07933 052 393</a>
 	Email: <a href="mailto:info@redemptioncareservices.co.uk">info@redemptioncareservices.co.uk</a>
 	</span>
 </div>
@@ -27,10 +27,10 @@
 <div class="section main-menu">
 	<div class="topnav" id="myTopNav">
 			<ul>
-				<li><a class="active" href="index.html">Home</a></li>
+				<li><a href="index.html">Home</a></li>
 				<li><a href="about.html">About Us</a></li>
 				<li><a href="services.html">Services</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a class="active" href="contact.html">Contact</a></li>
 				<li><a href="vacancies.html">Vacancies</a></li>
 				<li><a href="covid.html">Covid 19</a></li>
 				<li><a href="javascript:void(0);" class="icon" onclick="TopNavResponsive()">
@@ -40,17 +40,54 @@
 	</div>
 </div>
 
-<div class="container">
-	<div class="text">
-		<h1>Individual People, Individual Care</h1>
-		Redemption Care Services brings 20 years of experience in providing care for adults with learning disabilities, including autism, and mental health issues, with the associated challenging behaviour. We recognise that no two people are the same, so we provide person-centred, individually tailored care so that our services users can feel as independent and socially-inclusive as possible. 
-	</div>
-	<div class="image">
-		<img src="images/home_image1.jpg" alt="Woman looking after old lady" width="140%" height="140%"></img>
-	</div>
+<div class="image">
+	<img src="images/contact_image1.jpg" alt="Lady hugging a person with autism" width="100%" height="100%"></img>
 </div>
 
+<div class="center-heading">
+	<h1>Contact Us</h1>
+</div>
 
+<div class="center-text">
+	<p style="font-size: 20px;">Please complete the form below for any of the following:
+	<p>Making a referral
+	<br>Requesting further information
+	<br>Any other enquiry, except <a href="vacancies.html">job vacancies</a>
+</div>
+
+<div>
+	<form method="post" action="contactform.php" name="Contact">
+		<label for="enquiry">Type of Enquiry:</label>
+		<br><select name="enquiry" id="enquiry">
+			<option value="Referral">Referral</option>
+			<option value="Info">Information request</option>
+			<option value="Other">Other Enquiry</option>
+		</select>
+		<p><label for="name">Name:</label>
+		<br><input type="text" id="name" name="name" size="50">
+		<p><label for="jobtitle">Job Title:</label>
+		<br><input type="text" id="jobtitle" name="jobtitle" size="50">
+		<p><label for="org">Organisation:</label>
+		<br><input type="text" id="org" name="org" size="50">
+		<p><label for="telephone">Telephone:</label>
+		<br><input type="tel" id="telephone" name="telephone" size="20">
+		<p><label for="email">Email:</label>
+		<br><input type="email" id="email" name="email" size="50">
+		<p><label for="msg">Message:</label>
+		<br><textarea name="msg" cols="100" rows="40"></textarea>
+		<p><input type="submit">
+	</form>
+</div>
+
+<div class="center-heading">
+	<h1>Alternative contact details</h1>
+</div>
+
+<div class="container">
+	Email:	<a href="mailto:info@redemptioncareservices.com">info@redemptioncareservices.com</a> 
+	<p>Tel:	<a href="tel:+447933052393">07933 052 393</a>
+</div>
+<p>
 
 
 <div class="footer">
