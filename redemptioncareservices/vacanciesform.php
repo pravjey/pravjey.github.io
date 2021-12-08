@@ -5,15 +5,7 @@
 	$name = $_POST['name'];
 	$telephone = $_POST['telephone'];
 	$email = $_POST['email'];
-	$msg = $_POST['msg'];
-	
-	$target_file = basename($FILES["cv"]["name"]);
-	$uploadOk = 1;
-	$fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-	$handle = fopen($target_file, "r");
-	$content = fread($handle);
-	fclose($handle);
-    $encoded_content = chunk_split(base64_encode($content));
+	$msg = nl2br($_POST['msg']);
 	
 	$headers = "From: " . strip_tags($email) . "\r\n";
 	$headers .= "Reply-To: ". strip_tags($email) . "\r\n";
@@ -25,10 +17,9 @@
  	$message .= '<tr><td><strong>Name:</strong></td><td>' . strip_tags($name) . '</td></tr>';
 	$message .= '<tr><td><strong>Telephone:</strong></td><td>' . strip_tags($telephone) . '</td></tr>';
 	$message .= '<tr><td><strong>Email:</strong></td><td>' . strip_tags($email) . '</td></tr>';
-	$message .= '<tr><td><strong>Message:</strong></td><td>' . strip_tags($msg) . '</td></tr>';
-	$message .= '<tr><td><strong>CV:</strong></td><td>' . strip_tags($cv) . '</td></tr>';
-	$message .= '</table></body></html>';
-	$message .= $encoded_content;
+	$message .= '<tr><td><strong>Message:</strong></td><td>' . $msg . '</td></tr>';
+	$message .= '</table></body></html>';   
+
 	
 	mail("oxyderkis@gmail.com",strip_tags($subject),$message, $headers);
 
@@ -48,4 +39,3 @@
 	
 	
 ?>
-
