@@ -28,7 +28,7 @@
 	<div class="topnav" id="myTopNav">
 			<table>
 				<tr>
-					<td><a class="active" href="index.html">Home</a></td>
+					<td><a href="index.html">Home</a></td>
 					<td><div class="dropdown">
 							About Us
 							<div class="dropdown-content">
@@ -52,7 +52,7 @@
 							</div>
 						</div>
 					</td>
-					<td><a href="referral.html">Make a Referral</a></td>
+					<td><a class="active" href="referral.html">Make a Referral</a></td>
 					<td><a href="contact.html">Contact</a></td>
 					<td><a href="vacancies.html">Join the Team</a></td>
 					<td><a href="covid.html">Covid 19</a></td>
@@ -64,15 +64,53 @@
 	</div>
 </div>
 
-
-<div class="image">
-	<img src="images/home_image1.jpg" alt="People eating" id="bannerImage"></img>
-	<div class="image_overlay">Individual Lives, Individual Care</div>
+<div>
+	<img src="images/contact_image1.jpg" alt="Woman hugging autistic girl" width="100%" height="100%" id="bannerImage"></img>
+	<div class="image_overlay">Make a Referral</div>
 </div>
 
 <div class="container">
-Redemption Care Services brings 20 years of experience in providing care for adults with learning disabilities, including autism, and mental health issues, with the associated challenging behaviour. We recognise that no two people are the same, so we provide <b>person-centred, individually tailored care</b> for people with <a href="specialism1.html">Learning Disabilities</a>, <a href="specialism2.html">Mental Illnesses</a>, <a href="specialism3.html">Challenging Behaviours</a> and <a href="specialism4.html">Autism</a> so that our service users can feel as independent and socially-inclusive as possible.	
+	To make a referral, please provide your contact details and brief details about your requirements using the form below and our team will be in touch to discuss the your or your service user's individual needs and options.
+	<p class="center-text">
+	<ul>
+		
+		<li>To contact us about possible job vacancies, please use <a href="vacancies.html">this form</a></li>
+		<li>To contact us about anything else, please use <a href="contact.html">this form</a></li>
+	</ul>
+	</p>
 </div>
+
+<div>
+	<form method="post" action="referral.php" name="Contact">
+		<label for="enquiry">Type of Enquiry:</label>
+		<br><select name="enquiry" id="enquiry">
+			<option value="Referral">Making a Referral</option>
+		</select>
+		<p><label for="name">Name:</label>
+		<br><input type="text" id="name" name="name" size="50">
+		<p><label for="jobtitle">Job Title:</label>
+		<br><input type="text" id="jobtitle" name="jobtitle" size="50">
+		<p><label for="org">Organisation:</label>
+		<br><input type="text" id="org" name="org" size="50">
+		<p><label for="telephone">Telephone:</label>
+		<br><input type="tel" id="telephone" name="telephone" size="20">
+		<p><label for="email">Email:</label>
+		<br><input type="email" id="email" name="email" size="50">
+		<p><label for="msg">Message:</label>
+		<br><textarea name="msg" cols="100" rows="40"></textarea>
+		<p><input type="submit">
+	</form>
+</div>
+
+<div><p style="padding-top: 50px; padding-bottom: 50px;">
+<div class="center-heading">
+	<h1>Alternative contact details</h1>
+</div>
+<div class="container">
+	Email:	<a href="mailto:info@redemptioncareservices.com">info@redemptioncareservices.com</a> 
+	<p>Tel:	<a href="tel:+447933052393">07933 052 393</a>
+</div>
+<p></div>
 
 
 <div class="footer">
@@ -88,15 +126,6 @@ Redemption Care Services brings 20 years of experience in providing care for adu
 	<p>Company number: 13329432
 	<br>Tel:<a href="tel:+447933052393">07933 052 393<a>
 	<br>Email:<a href="mailto:info@redemptioncareservices.co.uk">info@redemptioncareservices.co.uk</a>
-	<div>
-		<div class="topnav" id="myTopNav">
-			<table>
-				<tr>
-					<td><a href="privacy.html" target="popup">Privacy Policy</a></td>	
-				</tr>
-			</table>
-		</div>
-	</div>	
 </div>
 
 
@@ -111,6 +140,6 @@ function TopNavResponsive() {
     x.className = "topnav";
   }
 }
-
+</script>
 
 </body>

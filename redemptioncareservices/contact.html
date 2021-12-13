@@ -18,25 +18,49 @@
 
 <div class="titlebar">
 	Redemption Care Services
-	<span style="float: right; color: #FFD733;">
-	Tel: <a href="tel:+447933052393">07933 052 393<a>
-	Email: <a href="mailto:info@redemptioncareservices.co.uk">info@redemptioncareservices.co.uk</a>
-	</span>
+	<div class="contact">
+		Tel: <a href="tel:+447933052393">07933 052 393</a>
+		<br>Email: <a href="mailto:info@redemptioncareservices.co.uk">info@redemptioncareservices.co.uk</a>
+	</div>
 </div>
 
-<div class="section main-menu">
+<div>
 	<div class="topnav" id="myTopNav">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About Us</a></li>
-				<li><a href="services.html">Services</a></li>
-				<li><a class="active" href="contact.html">Contact</a></li>
-				<li><a href="vacancies.html">Vacancies</a></li>
-				<li><a href="covid.html">Covid 19</a></li>
-				<li><a href="javascript:void(0);" class="icon" onclick="TopNavResponsive()">
-					<i class="fa fa-bars"></i>
-				</a></li> 
-			</ul>
+			<table>
+				<tr>
+					<td><a href="index.html">Home</a></td>
+					<td><div class="dropdown">
+							About Us
+							<div class="dropdown-content">
+								<table>
+									<tr><td><a href="about1.html">About Us</a></td></tr>
+									<tr><td><a href="about2.html">About The Team</a></td></tr>
+									<tr><td><a href="about3.html">Why Choose Us?</a></td></tr>
+								</table>
+							</div>
+						</div>
+					</td>
+					<td><div class="dropdown">
+							Our Specialisms
+							<div class="dropdown-content">
+								<table>
+									<tr><td><a href="specialism1.html">Learning Disabilities</a></td></tr>
+									<tr><td><a href="specialism2.html">Mental Illness</a></td></tr>
+									<tr><td><a href="specialism3.html">Challenging Behaviours</a></td></tr>
+									<tr><td><a href="specialism4.html">Autism</a></td></tr>
+								</table>
+							</div>
+						</div>
+					</td>
+					<td><a href="referral.html">Make a Referral</a></td>
+					<td><a class="active" href="contact.html">Contact</a></td>
+					<td><a href="vacancies.html">Join the Team</a></td>
+					<td><a href="covid.html">Covid 19</a></td>
+					<td><a href="javascript:void(0);" class="icon" onclick="TopNavResponsive()">
+						<i class="fa fa-bars"></i>
+					</a></td>
+				</tr>
+			</table>
 	</div>
 </div>
 
@@ -46,12 +70,12 @@
 </div>
 
 <div class="container">
-	Please complete the form below for any of the following:
+	To make a general enquiry, please provide your contact details and brief details of your enquiry using the form below and our team will be in touch.
 	<p class="center-text">
 	<ul>
-		<li>Making a referral</li>
-		<li>Requesting further information</li>
-		<li>Any other enquiry, except <a href="vacancies.html">job vacancies</a></li>
+		
+		<li>To contact us about possible job vacancies, please use <a href="vacancies.html">this form</a></li>
+		<li>TO make a referral, please use <a href="referral.html">this form</a></li>
 	</ul>
 	</p>
 </div>
@@ -60,9 +84,7 @@
 	<form method="post" action="contactform.php" name="Contact">
 		<label for="enquiry">Type of Enquiry:</label>
 		<br><select name="enquiry" id="enquiry">
-			<option value="Referral">Referral</option>
-			<option value="Info">Information request</option>
-			<option value="Other">Other Enquiry</option>
+			<option value="Other">General Enquiry</option>
 		</select>
 		<p><label for="name">Name:</label>
 		<br><input type="text" id="name" name="name" size="50">
